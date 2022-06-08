@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
-  const [isOpen3, setIsOpen3] = useState(false);
   const imagePath = `assets/logo.png`;
 
   const list = {
-    visible: { height: "auto", opacity: 1, y: 0 },
+    visible: { height: "auto", opacity: 1, y: "0px" },
     hidden: { height: "0px", opacity: 0, y: "-16px" },
   };
 
@@ -55,10 +54,11 @@ export const Navbar = () => {
           />
         </motion.svg>
         <motion.div
+          // initial={{opacity: 0, height: "0px"}}
           animate={isOpen ? "visible" : "hidden"}
           variants={list}
           transition={{ duration: 0.5 }}
-          className="h-0 absolute top-20 bg-primary_light w-full rounded-b-lg"
+          className="h-0 opacity-0 overflow-hidden absolute top-20 bg-primary_light w-full rounded-b-lg z-50"
         >
           <ul className="py-2 text-white font-bold text-lg text-center">
             <motion.li
@@ -87,20 +87,20 @@ export const Navbar = () => {
               className=" overflow-hidden h-0 bg-primary_light rounded-b-md"
             >
               <li>
-                <a>Empredimiento</a>
+                <a href="/#">Empredimiento</a>
               </li>
               <li>
-                <a>Enfoque pedagógico</a>
+                <a href="/#">Enfoque pedagógico</a>
               </li>
             </motion.ul>
             <li className="py-1">
-              <a href="#">Blog</a>
+              <a href="/#">Blog</a>
             </li>
             <li className="py-1">
-              <a href="#">Admisiones</a>
+              <a href="/#">Admisiones</a>
             </li>
             <li className="py-1">
-              <a href="#">Plataforma uDiscover</a>
+              <a href="/#">Plataforma uDiscover</a>
             </li>
           </ul>
         </motion.div>
@@ -136,17 +136,17 @@ export const Navbar = () => {
             className="absolute top-20 w-72 overflow-hidden h-0 bg-primary_light rounded-b-md"
           >
             <li>
-              <a>Empredimiento</a>
+              <a href="/#">Empredimiento</a>
             </li>
             <li>
-              <a>Enfoque pedagógico</a>
+              <a href="/#">Enfoque pedagógico</a>
             </li>
           </motion.ul>
 
           <li className="mr-1">
             <a
               className="hover:bg-secondary px-1 rounded transition-all duration-300"
-              href="#"
+              href="/#"
             >
               Blog
             </a>
@@ -154,7 +154,7 @@ export const Navbar = () => {
           <li className="mr-1">
             <a
               className="hover:bg-secondary px-1 rounded transition-all duration-300"
-              href="#"
+              href="/#"
             >
               Admisiones
             </a>
@@ -162,7 +162,7 @@ export const Navbar = () => {
           <li className="mr-2">
             <a
               className="hover:bg-secondary px-1 rounded transition-all duration-300"
-              href="#"
+              href="/#"
             >
               Plataforma uDiscover
             </a>
@@ -170,7 +170,7 @@ export const Navbar = () => {
           <li className="">
             <a
               className="bg-secondary px-2 py-2 rounded transition-all duration-300"
-              href="#"
+              href="/#"
             >
               Contacto
             </a>
