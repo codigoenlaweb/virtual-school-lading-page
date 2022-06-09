@@ -26,7 +26,7 @@ export const SectionFour = () => {
     ]
 
   return (
-    <section className="py-8 md:py-12 bg-gradient-to-b from-primary_theme to-secondary-light px-6 lg:px-10 min-h-screen flex flex-col justify-center items-center overflow-hidden">
+    <section className="py-8 md:py-12 bg-gradient-to-b from-primary_theme to-secondary px-6 lg:px-10 min-h-screen flex flex-col justify-center items-center overflow-hidden">
       <article className="w-full max-w-screen-xl mb-8 text-center text-white">
         <h2 className="text-center text-3xl">
           ¿Por qué tu hijo debe estudiar en uDiscover?

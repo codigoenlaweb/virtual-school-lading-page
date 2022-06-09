@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar } from "./components/navbar/Navbar";
+import { SectionFive } from "./components/sections/SectionFive";
 import { SectionFour } from "./components/sections/SectionFour";
 import { SectionOne } from "./components/sections/SectionOne";
 import { SectionThree } from "./components/sections/SectionThree";
@@ -14,6 +15,7 @@ export const App = () => {
             <SectionTwo />
             <SectionThree />
             <SectionFour />
+            <SectionFive />
         </main>
     </>
   );
