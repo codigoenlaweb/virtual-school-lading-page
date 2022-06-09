@@ -27,10 +27,10 @@ export const SectionOne = () => {
           transition={{ duration: 0.9 }}
           className="text-white mt-12 md:mt-20 w-3/4 max-w-md md:w-2/5"
         >
-          <h1 className="mb-5 font-bold text-2xl text-shadow-title">
+          <h1 className="mb-5 font-bold text-2xl md:text-3xl lg:text-4xl text-shadow-title">
             Descubre el legado que dejarás al mundo
           </h1>
-          <p className="lg:text-lg">
+          <p className="md:text-lg lg:text-xl">
             Desde un entorno virtual, guiamos virtudes, habilidades, intereses y
             afinidades para una proyección integral y sólida del individuo
           </p>
