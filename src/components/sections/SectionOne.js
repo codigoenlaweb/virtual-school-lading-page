@@ -8,7 +8,7 @@ export const SectionOne = () => {
   const imgGirlStudy = `assets/girl-study.png`;
 
   return (
-    <section className="bg-primary_theme -z-50 px-6 lg:px-10 min-h-screen flex flex-wrap justify-center relative overflow-hidden">
+    <section className="bg-primary_theme -z-50 px-6 lg:px-10 min-h-screen 2xl:items-center flex flex-wrap justify-center relative overflow-hidden">
       <img
         className="absolute top-0 left-0 h-auto w-full -z-10"
         src={imgbase}

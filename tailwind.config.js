@@ -10,7 +10,9 @@ module.exports = {
         primary_theme: "#4473cf",
         secondary: "#32c688",
         "secondary-light": "#73ebaa",
+        "secondary-dark": "#02b6a2",
         terceary: "#FFD025",
+        "terceary-dark": "#F68625",
       },
       boxShadow: {
         'shadow-form-yellow': '-6px -6px 0px #32c688',

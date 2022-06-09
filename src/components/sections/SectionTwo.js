@@ -5,7 +5,7 @@ export const SectionTwo = () => {
   const graduateIcon = `assets/graduate.svg`;
 
   return (
-    <section className="py-8 md:py-12 bg-primary_theme px-6 lg:px-10 min-h-screen flex flex-col items-center overflow-hidden">
+    <section className="py-8 md:py-12 bg-primary_theme px-6 lg:px-10 min-h-screen flex flex-col items-center justify-center overflow-hidden">
       <article className="text-white flex flex-wrap flex-col md:flex-row items-center md:items-center md:justify-between max-w-screen-xl">
         <h2 className="leading-7 text-shadow-title w-36 md:w-44 lg:w-72 font-bold text-3xl md:text-4xl lg:text-6xl text-center">
           Por una educación{" "}
@@ -50,7 +50,8 @@ export const SectionTwo = () => {
             <input
               type="text"
               id="name"
-              className="px-3 mb-3 h-10 text-lg rounded-full w-full outline-1 outline-primary_theme border border-solid border-gray-300 text-gray-500 font-medium"
+              placeholder="Maria José"
+              className=" placeholder:text-gray-300 px-3 mb-3 h-10 text-lg rounded-full w-full outline-1 outline-primary_theme border border-solid border-gray-300 text-gray-500 font-medium"
             />
           </div>
 
@@ -60,9 +61,10 @@ export const SectionTwo = () => {
               Apellido
             </label>
             <input
+            placeholder="González Pérez"
               type="text"
               id="last_name"
-              className="px-3 mb-3 h-10 text-lg rounded-full w-full outline-1 outline-primary_theme border border-solid border-gray-300 text-gray-500 font-medium"
+              className="placeholder:text-gray-300 px-3 mb-3 h-10 text-lg rounded-full w-full outline-1 outline-primary_theme border border-solid border-gray-300 text-gray-500 font-medium"
             />
           </div>
 
@@ -72,9 +74,10 @@ export const SectionTwo = () => {
               Correo electrónico
             </label>
             <input
+              placeholder="maria@gmail.com"
               type="email"
               id="email"
-              className="px-3 mb-3 h-10 text-lg rounded-full w-full outline-1 outline-primary_theme border border-solid border-gray-300 text-gray-500 font-medium"
+              className="placeholder:text-gray-300 px-3 mb-3 h-10 text-lg rounded-full w-full outline-1 outline-primary_theme border border-solid border-gray-300 text-gray-500 font-medium"
             />
           </div>
 
@@ -84,9 +87,10 @@ export const SectionTwo = () => {
               Teléfono celular
             </label>
             <input
+              placeholder="+569 12345678"
               type="tel"
               id="phone"
-              className="px-3 mb-3 h-10 text-lg rounded-full w-full outline-1 outline-primary_theme border border-solid border-gray-300 text-gray-500 font-medium"
+              className="placeholder:text-gray-300 px-3 mb-3 h-10 text-lg rounded-full w-full outline-1 outline-primary_theme border border-solid border-gray-300 text-gray-500 font-medium"
             />
           </div>
 
@@ -96,10 +100,11 @@ export const SectionTwo = () => {
               Edad del estudiante
             </label>
             <input
+            placeholder="12"
               type="number"
               min="3"
               id="age"
-              className="px-3 mb-3 h-10 text-lg rounded-full w-full outline-1 outline-primary_theme border border-solid border-gray-300 text-gray-500 font-medium"
+              className="placeholder:text-gray-300 px-3 mb-3 h-10 text-lg rounded-full w-full outline-1 outline-primary_theme border border-solid border-gray-300 text-gray-500 font-medium"
             />
           </div>
 

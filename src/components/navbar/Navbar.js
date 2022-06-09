@@ -27,9 +27,14 @@ export const Navbar = () => {
   };
 
   return (
-    <header>
+    <header className=" bg-primary">
       {/* mobiles */}
-      <nav className="lg:hidden sticky py-3 flex flex-wrap justify-between items-center bg-primary">
+      <motion.nav
+        initial={{ opacity: 0, y: "-100%", scale: 0.8 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="overflow-hidden lg:hidden sticky py-3 flex flex-wrap justify-between items-center bg-primary"
+      >
         <img className="h-14" src={imagePath} alt="logo" />
         <motion.svg
           initial={{ fill: "#fff" }}
@@ -104,10 +109,15 @@ export const Navbar = () => {
             </li>
           </ul>
         </motion.div>
-      </nav>
+      </motion.nav>
 
       {/* Desktop */}
-      <nav className="px-10 hidden lg:flex sticky py-3 flex-wrap justify-between items-center bg-primary">
+      <motion.nav
+        initial={{ opacity: 0, y: "-100%", scale: 0.8 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="px-10 hidden lg:flex sticky py-3 flex-wrap justify-between items-center bg-primary"
+      >
         <img className="h-14" src={imagePath} alt="logo" />
 
         <ul className="flex flex-wrap py-2 text-white font-bold text-xl text-center">
@@ -176,7 +186,7 @@ export const Navbar = () => {
             </a>
           </li>
         </ul>
-      </nav>
+      </motion.nav>
     </header>
   );
 };
