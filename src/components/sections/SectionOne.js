@@ -8,9 +8,9 @@ export const SectionOne = () => {
   const imgGirlStudy = `assets/girl-study.png`;
 
   return (
-    <section id="section-one" className="bg-primary_theme -z-50 px-6 lg:px-10 min-h-screen 2xl:items-center flex flex-wrap justify-center relative overflow-hidden">
+    <section id="section-one" className="bg-primary_theme px-6 lg:px-10 min-h-screen 2xl:items-center flex flex-wrap justify-center relative overflow-hidden">
       <img
-        className="absolute top-0 left-0 h-auto w-full -z-10"
+        className="absolute top-0 left-0 h-auto w-full"
         src={imgbase}
         alt="base"
       />
@@ -34,8 +34,8 @@ export const SectionOne = () => {
             Desde un entorno virtual, guiamos virtudes, habilidades, intereses y
             afinidades para una proyección integral y sólida del individuo
           </p>
-          <button className="mt-8 md:mt-5 lg:text-base border-solid border-2 border-terceary text-sm text-terceary rounded-xl px-2 py-1">
-            Inscripciones abiertas
+          <button className="mt-8 md:mt-5 lg:text-base border-solid border-2 border-terceary text-sm text-terceary hover:bg-terceary focus:bg-terceary hover:text-white focus:text-white transition duration-200 ease-linear rounded-xl px-2 py-1 outline-none">
+            <a href="/#">Inscripciones abiertas</a>
           </button>
         </motion.article>
         <motion.article

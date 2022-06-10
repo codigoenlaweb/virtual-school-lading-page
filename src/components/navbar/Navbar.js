@@ -27,11 +27,16 @@ export const Navbar = () => {
   };
 
   return (
-    <motion.header className="sticky top-0 z-40 bg-primary">
+    <motion.header
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1}}
+      // transition={{ duration: 0.8 }}
+      className="sticky top-0 z-40 bg-primary"
+    >
       {/* mobiles */}
       <motion.nav
-        initial={{ opacity: 0, y: "-50px", scale: 0.8 }}
-        animate={{ opacity: 1, y: "0px", scale: 1 }}
+        initial={{ opacity: 0, y: -50, scale: 0.8 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.8 }}
         className="z-50 overflow-hidden lg:hidden py-3 flex flex-wrap justify-between items-center bg-primary"
       >
@@ -113,19 +118,19 @@ export const Navbar = () => {
 
       {/* Desktop */}
       <motion.nav
-        initial={{ opacity: 0, y: "-50px", scale: 0.8 }}
-        animate={{ opacity: 1, y: "0px", scale: 1 }}
+        initial={{ opacity: 0, y: -50, scale: 0.8 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.8 }}
         className={`z-50 px-10 hidden top-0 left-0 right-0 lg:flex py-3 flex-wrap justify-between items-center bg-primary`}
       >
         <img className="h-14" src={imagePath} alt="logo" />
 
         <ul className="flex flex-wrap py-2 text-white font-bold text-xl text-center">
-          <li
+          <button
             onClick={() => {
               setIsOpen2(!isOpen2);
             }}
-            className="px-1 mr-1 rounded transition-all duration-300 flex flex-wrap justify-center items-center rounded-t-md hover:bg-secondary"
+            className="font-bold px-1 mr-1 rounded transition-all duration-300 flex flex-wrap justify-center items-center rounded-t-md hover:bg-secondary focus:bg-secondary outline-none"
           >
             Experiencia uDiscover
             <svg
@@ -136,7 +141,7 @@ export const Navbar = () => {
             >
               <path d="M4.167 15.833V14.083H15.833V15.833ZM4.479 12.5 10 4.167 15.5 12.5ZM9.979 10.75ZM7.729 10.75H12.25L10 7.333Z" />
             </svg>
-          </li>
+          </button>
 
           {/* submenu */}
           <motion.ul
@@ -146,16 +151,16 @@ export const Navbar = () => {
             className="absolute top-20 w-72 overflow-hidden h-0 bg-primary_light rounded-b-md"
           >
             <li>
-              <a href="/#">Empredimiento</a>
+              <a className="hover:text-secondary focus:text-secondary outline-none transition duration-150 ease-linear" href="/#">Empredimiento</a>
             </li>
             <li>
-              <a href="/#">Enfoque pedagógico</a>
+              <a className="hover:text-secondary focus:text-secondary outline-none transition duration-150 ease-linear" href="/#">Enfoque pedagógico</a>
             </li>
           </motion.ul>
 
           <li className="mr-1">
             <a
-              className="hover:bg-secondary px-1 rounded transition-all duration-300"
+              className="hover:bg-secondary px-1 rounded transition-all duration-300 focus:bg-secondary outline-none"
               href="/#"
             >
               Blog
@@ -163,7 +168,7 @@ export const Navbar = () => {
           </li>
           <li className="mr-1">
             <a
-              className="hover:bg-secondary px-1 rounded transition-all duration-300"
+              className="hover:bg-secondary px-1 rounded transition-all duration-300 focus:bg-secondary outline-none"
               href="/#"
             >
               Admisiones
@@ -171,7 +176,7 @@ export const Navbar = () => {
           </li>
           <li className="mr-2">
             <a
-              className="hover:bg-secondary px-1 rounded transition-all duration-300"
+              className="hover:bg-secondary px-1 rounded transition-all duration-300 focus:bg-secondary outline-none"
               href="/#"
             >
               Plataforma uDiscover
@@ -179,7 +184,7 @@ export const Navbar = () => {
           </li>
           <li className="">
             <a
-              className="bg-secondary px-2 py-2 rounded transition-all duration-300"
+              className="bg-secondary px-2 py-2 rounded transition-all duration-300 outline-none hover:bg-secondary-light focus:bg-secondary-light"
               href="/#"
             >
               Contacto

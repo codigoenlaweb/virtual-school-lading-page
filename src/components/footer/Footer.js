@@ -18,7 +18,7 @@ export const Footer = () => {
             <li>olmosjesusarmando@gmail.com</li>
             <li>
               <a
-                className="text-secondary-dark hover:text-secondary focus:text-secondary transition ease-linear duration-200"
+                className="outline-none text-secondary-dark hover:text-secondary focus:text-secondary transition ease-linear duration-200"
                 href="https://www.linkedin.com/in/jesus-armando-olmos-olmos-607748228/"
               >
                 Linkedin
@@ -26,7 +26,7 @@ export const Footer = () => {
             </li>
             <li>
               <a
-                className="text-secondary-dark hover:text-secondary focus:text-secondary transition ease-linear duration-200"
+                className="outline-none text-secondary-dark hover:text-secondary focus:text-secondary transition ease-linear duration-200"
                 href="https://github.com/codigoenlaweb"
               >
                 Github

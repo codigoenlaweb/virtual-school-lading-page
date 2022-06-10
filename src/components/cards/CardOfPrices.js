@@ -45,7 +45,7 @@ export const CardOfPrices = ({
         )}
       </div>
       <div className="absolute left-0 bottom-3 w-full mx-auto flex flex-wrap justify-center">
-        <button className="font-bold group py-1 px-4 rounded-full border-solid border-2 text-terceary-dark hover:text-white border-terceary-dark focus:bg-terceary-dark hover:bg-terceary-dark outline-none transition duration-200 ease-linear">
+        <button className="font-bold group py-1 px-4 rounded-full border-solid border-2 text-terceary-dark hover:text-white focus:text-white border-terceary-dark focus:bg-terceary-dark hover:bg-terceary-dark outline-none transition duration-200 ease-linear">
           <a className="" href="/#">
             Contacta a tu asesor
           </a>
