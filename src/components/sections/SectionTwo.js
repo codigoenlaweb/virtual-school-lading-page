@@ -44,9 +44,7 @@ export const SectionTwo = () => {
         <div className="mt-6 flex flex-wrap justify-around items-center">
           {/* Name */}
           <div className="w-full max-w-sm sm:w-45%">
-            <label for="name" className="text-xl pl-4">
-              Nombre
-            </label>
+            <label className="text-xl pl-4">Nombre</label>
             <input
               type="text"
               id="name"
@@ -57,11 +55,9 @@ export const SectionTwo = () => {
 
           {/* Last Name */}
           <div className="w-full max-w-sm sm:w-45%">
-            <label for="last_name" className="text-xl pl-4">
-              Apellido
-            </label>
+            <label className="text-xl pl-4">Apellido</label>
             <input
-            placeholder="González Pérez"
+              placeholder="González Pérez"
               type="text"
               id="last_name"
               className="placeholder:text-gray-300 px-3 mb-3 h-10 text-lg rounded-full w-full outline-1 outline-primary_theme border border-solid border-gray-300 text-gray-500 font-medium"
@@ -70,9 +66,7 @@ export const SectionTwo = () => {
 
           {/* Email */}
           <div className="w-full max-w-sm sm:w-45%">
-            <label for="email" className="text-xl pl-4">
-              Correo electrónico
-            </label>
+            <label className="text-xl pl-4">Correo electrónico</label>
             <input
               placeholder="maria@gmail.com"
               type="email"
@@ -83,9 +77,7 @@ export const SectionTwo = () => {
 
           {/* Phone */}
           <div className="w-full max-w-sm sm:w-45%">
-            <label for="phone" className="text-xl pl-4">
-              Teléfono celular
-            </label>
+            <label className="text-xl pl-4">Teléfono celular</label>
             <input
               placeholder="+569 12345678"
               type="tel"
@@ -96,11 +88,9 @@ export const SectionTwo = () => {
 
           {/* Age */}
           <div className="w-full max-w-sm sm:w-45%">
-            <label for="age" className="text-xl pl-4">
-              Edad del estudiante
-            </label>
+            <label className="text-xl pl-4">Edad del estudiante</label>
             <input
-            placeholder="12"
+              placeholder="12"
               type="number"
               min="3"
               id="age"
@@ -110,16 +100,15 @@ export const SectionTwo = () => {
 
           {/* Reason */}
           <div className="w-full max-w-sm sm:w-45%">
-            <label for="reason" className="text-xl pl-4">
+            <label className="text-xl pl-4">
               ¿Cuál es el motivo para buscar un colegio virtual?
             </label>
             <select
+              defaultValue=""
               id="reason"
               className="px-3 mb-3 h-10 text-lg rounded-full w-full outline-1 outline-primary_theme border border-solid border-gray-300 text-gray-500 font-medium"
             >
-              <option disabled value="" selected>
-                Selecciona una opción
-              </option>
+              <option value="">Selecciona una opción</option>
               <option value="Viajamos mucho">Viajamos mucho</option>
               <option value="Mi hijo es deportista/artista y necesita flexibilidad de horarios">
                 Mi hijo es deportista/artista y necesita flexibilidad de
@@ -157,15 +146,25 @@ export const SectionTwo = () => {
 
         <p className="mt-4 text-sm">
           ¿Ya te inscribiste?{" "}
-          <a href="/#" className="text-primary hover:text-primary_theme pl-2 font-semibold">
+          <a
+            href="/#"
+            className="text-primary hover:text-primary_theme pl-2 font-semibold"
+          >
             Ingresa aquí para conocer el proceso de admisión.
           </a>
         </p>
       </form>
 
       <article className="mt-10 text-white text-center max-w-screen-xl">
-        <img src={graduateIcon} alt="gorro de graduacion" className="mx-auto w-24 mb-2"/>
-        <p className="md:text-lg lg:text-xl">Al ser parte de uDiscover, nuestros estudiantes obtienen la titulación High School Diploma.</p>
+        <img
+          src={graduateIcon}
+          alt="gorro de graduacion"
+          className="mx-auto w-24 mb-2"
+        />
+        <p className="md:text-lg lg:text-xl">
+          Al ser parte de uDiscover, nuestros estudiantes obtienen la titulación
+          High School Diploma.
+        </p>
       </article>
     </section>
   );
