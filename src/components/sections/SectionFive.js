@@ -4,7 +4,7 @@ export const SectionFive = () => {
   const imgPath = "assets/creative-girl.png";
   return (
     <section className="py-8 md:py-12 bg-gradient-to-t from-primary_theme to-secondary px-6 lg:px-10 min-h-screen flex flex-col justify-center overflow-hidden">
-      <article className=" flex flex-col md:flex-row flex-wrap md:items-center md:justify-between max-w-screen-xl">
+      <article className="mx-auto flex flex-col md:flex-row flex-wrap md:items-center md:justify-between max-w-screen-xl">
         <img
           src={imgPath}
           alt="creatividad"
@@ -16,7 +16,7 @@ export const SectionFive = () => {
             <span className="text-secondary-light">E</span>xperiencias para{" "}
             <span className="text-secondary-light">R</span>econocerse
           </p>
-          <h2 className="mt-4 text-6xl lg:text-8xl font-bold text-secondary-light">
+          <h2 className="mt-4 text-6xl lg:text-7xl font-bold text-secondary-light">
             Educación para la vida
           </h2>
           <p className="text-secondary-light font-bold mt-4 lg:mt-6 lg:text-lg">

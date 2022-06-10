@@ -33,7 +33,7 @@ export const Navbar = () => {
         initial={{ opacity: 0, y: "-100%", scale: 0.8 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="overflow-hidden lg:hidden sticky py-3 flex flex-wrap justify-between items-center bg-primary"
+        className="overflow-hidden lg:hidden top-0 left-0 right-0 py-3 flex flex-wrap justify-between items-center bg-primary"
       >
         <img className="h-14" src={imagePath} alt="logo" />
         <motion.svg
@@ -116,7 +116,7 @@ export const Navbar = () => {
         initial={{ opacity: 0, y: "-100%", scale: 0.8 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="px-10 hidden lg:flex sticky py-3 flex-wrap justify-between items-center bg-primary"
+        className="px-10 hidden top-0 left-0 right-0 lg:flex sticky py-3 flex-wrap justify-between items-center bg-primary"
       >
         <img className="h-14" src={imagePath} alt="logo" />
 
