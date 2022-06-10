@@ -19,6 +19,7 @@ module.exports = {
       },
       backgroundImage: {
         'bg-form': "url('/public/assets/bg-form.png')",
+        'bg-footer': "url('/public/assets/footerbg.png')",
       },
       width: {
         '45%': '45%',

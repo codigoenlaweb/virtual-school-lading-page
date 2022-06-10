@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "./components/footer/Footer";
 import { Navbar } from "./components/navbar/Navbar";
 import { SectionFive } from "./components/sections/SectionFive";
 import { SectionFour } from "./components/sections/SectionFour";
@@ -19,6 +20,7 @@ export const App = () => {
             <SectionFive />
             <SectionSix />
         </main>
+        <Footer />
     </>
   );
 };
