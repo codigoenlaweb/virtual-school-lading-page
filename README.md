@@ -1,6 +1,6 @@
 <h1 align="center">Virtual school landing page</h1> 
 
-![View project](https://github.com/codigoenlaweb/virtual-school-lading-page/tree/master/public/assets/readmeimg.jpeg)
+![View project](https://github.com/codigoenlaweb/virtual-school-lading-page/blob/master/public/assets/readmeimg.jpeg)
 
 <h4 align="center">Una landing page realizada con React</h4>
 <div align="center">
