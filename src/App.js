@@ -11,7 +11,7 @@ import { SectionTwo } from "./components/sections/SectionTwo";
 export const App = () => {
   return (
     <>
-        <Navbar />
+        <Navbar/>
         <main>
             <SectionOne />
             <SectionTwo />

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useObserver } from "../../hooks/useObserver";
 
 const prueba = require.context("../../assets/img", true);
 
 export const SectionSix = () => {
+  const { intersecting } = useObserver("#section-six");
   //   load image
   const [isVisible, setIsVisible] = useState(false);
   //   Data
@@ -65,10 +67,29 @@ export const SectionSix = () => {
     notvisible: { opacity: 0 },
   };
 
+  const animateLeft = {
+    visible: { opacity: 1, x: 0, scale: 1 },
+    hidden: { opacity: 0, x: "-100%", scale: 0.8 },
+  };
+
+  const animateRight = {
+    visible: { opacity: 1, x: 0, scale: 1 },
+    hidden: { opacity: 0, x: "100%", scale: 0.8 },
+  };
+
   return (
-    <section className="py-8 md:py-12 bg-primary_theme px-6 lg:px-10 min-h-screen flex flex-col items-center md:justify-center overflow-hidden">
+    <section
+      id="section-six"
+      className="py-8 md:py-12 bg-primary_theme px-6 lg:px-10 min-h-screen flex flex-col items-center md:justify-center overflow-hidden"
+    >
       <article className="w-full flex flex-wrap flex-col max-w-screen-lg md:flex-row md:items-center">
-        <div className="flex flex-col w-full md:w-1/2">
+        <motion.div
+          initial={{ opacity: 0, x: "-100%", scale: 0.8 }}
+          animate={intersecting ? "visible" : "hidden"}
+          variants={animateLeft}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col w-full md:w-1/2"
+        >
           <motion.img
             animate={isVisible ? "yesvisible" : "notvisible"}
             variants={animationVisibility}
@@ -96,8 +117,14 @@ export const SectionSix = () => {
               {">"}
             </button>
           </div>
-        </div>
-        <div className="flex flex-col w-full md:w-1/2 lg:w-2/5 mx-auto">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: "100%", scale: 0.8 }}
+          animate={intersecting ? "visible" : "hidden"}
+          variants={animateRight}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col w-full md:w-1/2 lg:w-2/5 mx-auto"
+        >
           <motion.p
             animate={isVisible ? "yesvisible" : "notvisible"}
             variants={animationVisibility}
@@ -124,7 +151,7 @@ export const SectionSix = () => {
           >
             {selectContent.rol}
           </motion.p>
-        </div>
+        </motion.div>
       </article>
     </section>
   );

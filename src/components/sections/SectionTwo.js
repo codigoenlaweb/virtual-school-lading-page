@@ -1,18 +1,56 @@
 import React from "react";
+import { useObserver } from "../../hooks/useObserver";
+import { motion } from "framer-motion";
 import "./text-shadow.css";
 
 export const SectionTwo = () => {
+  const { intersecting } = useObserver("#section-two");
   const graduateIcon = `assets/graduate.svg`;
 
+  const animateTop = {
+    visible: { opacity: 1, y: 0, scale: 1 },
+    hidden: { opacity: 0, y: "+100px", scale: 0.8 },
+  };
+
+  const animateLeft = {
+    visible: { opacity: 1, x: 0, scale: 1 },
+    hidden: { opacity: 0, x: "-100%", scale: 0.8 },
+  };
+
+  const animateRight = {
+    visible: { opacity: 1, x: 0, scale: 1 },
+    hidden: { opacity: 0, x: "100%", scale: 0.8 },
+  };
+
+  const animateCenter = {
+    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0.4 },
+  };
+
   return (
-    <section className="py-8 md:py-12 bg-primary_theme px-6 lg:px-10 min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section
+      id="section-two"
+      className="py-8 md:py-12 bg-primary_theme px-6 lg:px-10 min-h-screen flex flex-col items-center justify-center overflow-hidden"
+    >
       <article className="text-white flex flex-wrap flex-col md:flex-row items-center md:items-center md:justify-between max-w-screen-xl">
-        <h2 className="leading-7 text-shadow-title w-36 md:w-44 lg:w-72 font-bold text-3xl md:text-4xl lg:text-6xl text-center">
+        <motion.h2
+          initial={{ opacity: 0, x: "-100%", scale: 0.8 }}
+          animate={intersecting ? "visible" : "hidden"}
+          variants={animateLeft}
+          transition={{ duration: 0.8 }}
+          className="leading-7 text-shadow-title w-36 md:w-44 lg:w-72 font-bold text-3xl md:text-4xl lg:text-6xl text-center"
+        >
           Por una educación{" "}
           <span className="leading-7 text-secondary-light">+</span>{" "}
           <span className="leading-7 text-terceary">humana</span>
-        </h2>
-        <div className="w-full md:w-2/3 lg:text-xl">
+        </motion.h2>
+        <motion.div
+          initial={{ opacity: 0, x: "100%", scale: 0.8 }}
+          animate={intersecting ? "visible" : "hidden"}
+          variants={animateRight}
+          transition={{ duration: 0.8 }}
+          className="w-full md:w-2/3 lg:text-xl"
+        >
           <h3 className="font-bold mt-5">
             uDiscover es un Colegio Virtual bilingüe Americano, con enfoque en
             Tecnología, Emprendimiento e Innovación.
@@ -27,10 +65,16 @@ export const SectionTwo = () => {
             de carácter mixto, Calendarios A (Inicio clases Febrero) y B (Inicio
             clases Agosto).
           </p>
-        </div>
+        </motion.div>
       </article>
 
-      <form className="bg-bg-form shadow-shadow-form-yellow mt-8 md:mt-12 px-4 py-6 text-white flex flex-col items-center max-w-screen-lg bg-terceary rounded-2xl">
+      <motion.form
+        initial={{ opacity: 0, scale: 0.4 }}
+        animate={intersecting ? "visible" : "hidden"}
+        variants={animateCenter}
+        transition={{ duration: 0.8 }}
+        className="bg-bg-form shadow-shadow-form-yellow mt-8 md:mt-12 px-4 py-6 text-white flex flex-col items-center max-w-screen-lg bg-terceary rounded-2xl"
+      >
         {/* Inscribete */}
         <div className=" max-w-md">
           <h2 className="text-4xl font-black">Inscrpíbete ahora</h2>
@@ -153,9 +197,15 @@ export const SectionTwo = () => {
             Ingresa aquí para conocer el proceso de admisión.
           </a>
         </p>
-      </form>
+      </motion.form>
 
-      <article className="mt-10 text-white text-center max-w-screen-xl">
+      <motion.article
+        initial={{ opacity: 0, y: "+100px", scale: 0.8 }}
+        animate={intersecting ? "visible" : "hidden"}
+        variants={animateTop}
+        transition={{ duration: 0.8 }}
+        className="mt-10 text-white text-center max-w-screen-xl"
+      >
         <img
           src={graduateIcon}
           alt="gorro de graduacion"
@@ -165,7 +215,7 @@ export const SectionTwo = () => {
           Al ser parte de uDiscover, nuestros estudiantes obtienen la titulación
           High School Diploma.
         </p>
-      </article>
+      </motion.article>
     </section>
   );
 };

@@ -27,13 +27,13 @@ export const Navbar = () => {
   };
 
   return (
-    <header className=" bg-primary">
+    <motion.header className="sticky top-0 z-40 bg-primary">
       {/* mobiles */}
       <motion.nav
-        initial={{ opacity: 0, y: "-100%", scale: 0.8 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
+        initial={{ opacity: 0, y: "-50px", scale: 0.8 }}
+        animate={{ opacity: 1, y: "0px", scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="overflow-hidden lg:hidden top-0 left-0 right-0 py-3 flex flex-wrap justify-between items-center bg-primary"
+        className="z-50 overflow-hidden lg:hidden py-3 flex flex-wrap justify-between items-center bg-primary"
       >
         <img className="h-14" src={imagePath} alt="logo" />
         <motion.svg
@@ -113,10 +113,10 @@ export const Navbar = () => {
 
       {/* Desktop */}
       <motion.nav
-        initial={{ opacity: 0, y: "-100%", scale: 0.8 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
+        initial={{ opacity: 0, y: "-50px", scale: 0.8 }}
+        animate={{ opacity: 1, y: "0px", scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="px-10 hidden top-0 left-0 right-0 lg:flex sticky py-3 flex-wrap justify-between items-center bg-primary"
+        className={`z-50 px-10 hidden top-0 left-0 right-0 lg:flex py-3 flex-wrap justify-between items-center bg-primary`}
       >
         <img className="h-14" src={imagePath} alt="logo" />
 
@@ -187,6 +187,6 @@ export const Navbar = () => {
           </li>
         </ul>
       </motion.nav>
-    </header>
+    </motion.header>
   );
 };

@@ -1,16 +1,43 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useObserver } from "../../hooks/useObserver";
 
 export const SectionFive = () => {
+  const { intersecting } = useObserver("#section-five");
   const imgPath = "assets/creative-girl.png";
+
+  const animateLeft = {
+    visible: { opacity: 1, x: 0, scale: 1 },
+    hidden: { opacity: 0, x: "-100%", scale: 0.8 },
+  };
+
+  const animateRight = {
+    visible: { opacity: 1, x: 0, scale: 1 },
+    hidden: { opacity: 0, x: "100%", scale: 0.8 },
+  };
+
   return (
-    <section className="py-8 md:py-12 bg-gradient-to-t from-primary_theme to-secondary px-6 lg:px-10 min-h-screen flex flex-col justify-center overflow-hidden">
+    <section
+      id="section-five"
+      className="py-8 md:py-12 bg-gradient-to-t from-primary_theme to-secondary px-6 lg:px-10 min-h-screen flex flex-col justify-center overflow-hidden"
+    >
       <article className="mx-auto flex flex-col md:flex-row flex-wrap md:items-center md:justify-between max-w-screen-xl">
-        <img
+        <motion.img
+          initial={{ opacity: 0, x: "-100%", scale: 0.8 }}
+          animate={intersecting ? "visible" : "hidden"}
+          variants={animateLeft}
+          transition={{ duration: 0.8 }}
           src={imgPath}
           alt="creatividad"
           className="w-full md:w-45% max-w-md mx-auto md:mx-auto"
         />
-        <div className="flex flex-col w-full md:w-1/2">
+        <motion.div
+          initial={{ opacity: 0, x: "100%", scale: 0.8 }}
+          animate={intersecting ? "visible" : "hidden"}
+          variants={animateRight}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col w-full md:w-1/2"
+        >
           <p className="mt-6 text-terceary font-bold w-36 justify-start md:text-xl md:w-48 lg:text-2xl lg:w-56">
             <span className="text-secondary-light">S</span>aberes y{" "}
             <span className="text-secondary-light">E</span>xperiencias para{" "}
@@ -32,7 +59,7 @@ export const SectionFive = () => {
           >
             CONOCE NUESTRA METODOLOGÍA
           </a>
-        </div>
+        </motion.div>
       </article>
     </section>
   );
