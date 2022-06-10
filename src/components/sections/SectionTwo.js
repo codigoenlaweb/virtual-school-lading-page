@@ -77,7 +77,7 @@ export const SectionTwo = () => {
       >
         {/* Inscribete */}
         <div className=" max-w-md">
-          <h2 className="text-4xl font-black">Inscrpíbete ahora</h2>
+          <h2 className="text-4xl font-black">Inscríbete ahora</h2>
           <p className="mt-3 font-black">
             Nuestra asesora pedagógica se pondrá en contacto para iniciar el
             proceso de inscripción de tu hijo.
